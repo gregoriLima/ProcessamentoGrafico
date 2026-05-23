@@ -1,4 +1,5 @@
 C:/Users/Greg/Documents/Faculdade CC/ProcessamentoGrafico/build/CMakeFiles/tarefa_parte4.dir
+C:/Users/Greg/Documents/Faculdade CC/ProcessamentoGrafico/build/CMakeFiles/atividade_vivencial_2.dir
 C:/Users/Greg/Documents/Faculdade CC/ProcessamentoGrafico/build/CMakeFiles/edit_cache.dir
 C:/Users/Greg/Documents/Faculdade CC/ProcessamentoGrafico/build/CMakeFiles/rebuild_cache.dir
 C:/Users/Greg/Documents/Faculdade CC/ProcessamentoGrafico/build/third_party/glfw/CMakeFiles/edit_cache.dir

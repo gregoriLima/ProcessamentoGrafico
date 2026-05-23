@@ -1,27 +1,38 @@
 # ProcessamentoGrafico
 
-Projeto independente da tarefa 4, pronto para compilar fora da pasta original.
+Este projeto contem a atividade vivencial 2, um jogo 2D simples em OpenGL com personagem, cenario em parallax e movimentacao por teclado e mouse.
 
-## Estrutura
+## Arquivo principal
 
-- `src/tarefa_parte4.cpp`: codigo-fonte principal.
-- `assets/`: texturas usadas pela aplicacao.
+- `src/atividade_vivencial_2.cpp`: jogo com personagem, camadas `sky`, `clouds`, `mountains` e `pixelWall`.
+
+## Dependencias locais
+
+- `assets/`: texturas usadas no jogo.
 - `common/glad.c`: loader OpenGL.
 - `include/`: headers locais de GLAD, GLM e `stb_image.h`.
 - `third_party/glfw/`: codigo-fonte local do GLFW para build offline.
 
-## Como buildar
+## Como compilar
 
 No PowerShell, entre na pasta `build` e execute:
 
 ```powershell
-cmake --build .
+cmake --build . --target atividade_vivencial_2
 ```
 
 ## Como executar
 
+Ainda na pasta `build`, execute:
+
 ```powershell
-.\tarefa_parte4.exe
+.\atividade_vivencial_2.exe
 ```
 
-O executavel deve ser iniciado a partir da pasta `build` para que as texturas em `..\assets\` sejam encontradas corretamente.
+O executavel deve ser iniciado a partir da pasta `build` para que os arquivos em `..\assets\` sejam encontrados corretamente.
+
+## Controles
+
+- Setas direcionais: movem o personagem.
+- Clique esquerdo do mouse: reposiciona o personagem dentro da area jogavel.
+- `Esc`: fecha a janela.

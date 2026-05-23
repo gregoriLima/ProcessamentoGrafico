@@ -129,6 +129,19 @@ tarefa_parte4/fast:
 .PHONY : tarefa_parte4/fast
 
 #=============================================================================
+# Target rules for targets named atividade_vivencial_2
+
+# Build rule for target.
+atividade_vivencial_2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 atividade_vivencial_2
+.PHONY : atividade_vivencial_2
+
+# fast build rule for target.
+atividade_vivencial_2/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\atividade_vivencial_2.dir\build.make CMakeFiles/atividade_vivencial_2.dir/build
+.PHONY : atividade_vivencial_2/fast
+
+#=============================================================================
 # Target rules for targets named glfw
 
 # Build rule for target.
@@ -160,6 +173,7 @@ common/glad.obj: common/glad.c.obj
 # target to build an object file
 common/glad.c.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\tarefa_parte4.dir\build.make CMakeFiles/tarefa_parte4.dir/common/glad.c.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\atividade_vivencial_2.dir\build.make CMakeFiles/atividade_vivencial_2.dir/common/glad.c.obj
 .PHONY : common/glad.c.obj
 
 common/glad.i: common/glad.c.i
@@ -168,6 +182,7 @@ common/glad.i: common/glad.c.i
 # target to preprocess a source file
 common/glad.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\tarefa_parte4.dir\build.make CMakeFiles/tarefa_parte4.dir/common/glad.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\atividade_vivencial_2.dir\build.make CMakeFiles/atividade_vivencial_2.dir/common/glad.c.i
 .PHONY : common/glad.c.i
 
 common/glad.s: common/glad.c.s
@@ -176,7 +191,32 @@ common/glad.s: common/glad.c.s
 # target to generate assembly for a file
 common/glad.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\tarefa_parte4.dir\build.make CMakeFiles/tarefa_parte4.dir/common/glad.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\atividade_vivencial_2.dir\build.make CMakeFiles/atividade_vivencial_2.dir/common/glad.c.s
 .PHONY : common/glad.c.s
+
+src/atividade_vivencial_2.obj: src/atividade_vivencial_2.cpp.obj
+.PHONY : src/atividade_vivencial_2.obj
+
+# target to build an object file
+src/atividade_vivencial_2.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\atividade_vivencial_2.dir\build.make CMakeFiles/atividade_vivencial_2.dir/src/atividade_vivencial_2.cpp.obj
+.PHONY : src/atividade_vivencial_2.cpp.obj
+
+src/atividade_vivencial_2.i: src/atividade_vivencial_2.cpp.i
+.PHONY : src/atividade_vivencial_2.i
+
+# target to preprocess a source file
+src/atividade_vivencial_2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\atividade_vivencial_2.dir\build.make CMakeFiles/atividade_vivencial_2.dir/src/atividade_vivencial_2.cpp.i
+.PHONY : src/atividade_vivencial_2.cpp.i
+
+src/atividade_vivencial_2.s: src/atividade_vivencial_2.cpp.s
+.PHONY : src/atividade_vivencial_2.s
+
+# target to generate assembly for a file
+src/atividade_vivencial_2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\atividade_vivencial_2.dir\build.make CMakeFiles/atividade_vivencial_2.dir/src/atividade_vivencial_2.cpp.s
+.PHONY : src/atividade_vivencial_2.cpp.s
 
 src/tarefa_parte4.obj: src/tarefa_parte4.cpp.obj
 .PHONY : src/tarefa_parte4.obj
@@ -211,11 +251,15 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... update_mappings
+	@echo ... atividade_vivencial_2
 	@echo ... glfw
 	@echo ... tarefa_parte4
 	@echo ... common/glad.obj
 	@echo ... common/glad.i
 	@echo ... common/glad.s
+	@echo ... src/atividade_vivencial_2.obj
+	@echo ... src/atividade_vivencial_2.i
+	@echo ... src/atividade_vivencial_2.s
 	@echo ... src/tarefa_parte4.obj
 	@echo ... src/tarefa_parte4.i
 	@echo ... src/tarefa_parte4.s

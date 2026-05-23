@@ -18,13 +18,24 @@ add_executable(tarefa_parte4
     common/glad.c
 )
 
+add_executable(atividade_vivencial_2
+    src/atividade_vivencial_2.cpp
+    common/glad.c
+)
+
 target_include_directories(tarefa_parte4 PRIVATE
+    ${CMAKE_SOURCE_DIR}/include
+    ${CMAKE_SOURCE_DIR}/third_party/glfw/include
+)
+
+target_include_directories(atividade_vivencial_2 PRIVATE
     ${CMAKE_SOURCE_DIR}/include
     ${CMAKE_SOURCE_DIR}/third_party/glfw/include
 )
 
 if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
     target_link_options(tarefa_parte4 PRIVATE -static-libgcc -static-libstdc++)
+    target_link_options(atividade_vivencial_2 PRIVATE -static-libgcc -static-libstdc++)
 endif()
 
 if(WIN32 AND CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
@@ -36,20 +47,36 @@ if(WIN32 AND CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
                 "${CXX_COMPILER_DIR}/libwinpthread-1.dll"
                 "$<TARGET_FILE_DIR:tarefa_parte4>/libwinpthread-1.dll"
         )
+        add_custom_command(TARGET atividade_vivencial_2 POST_BUILD
+            COMMAND ${CMAKE_COMMAND} -E copy_if_different
+                "${CXX_COMPILER_DIR}/libwinpthread-1.dll"
+                "$<TARGET_FILE_DIR:atividade_vivencial_2>/libwinpthread-1.dll"
+        )
     endif()
 endif()
 
 if(WIN32)
     target_link_libraries(tarefa_parte4 PRIVATE glfw opengl32)
+    target_link_libraries(atividade_vivencial_2 PRIVATE glfw opengl32)
 elseif(APPLE)
     find_library(OpenGL_LIBRARY OpenGL)
     target_link_libraries(tarefa_parte4 PRIVATE glfw ${OpenGL_LIBRARY})
+    target_link_libraries(atividade_vivencial_2 PRIVATE glfw ${OpenGL_LIBRARY})
 else()
     find_package(OpenGL REQUIRED)
     target_link_libraries(tarefa_parte4 PRIVATE glfw ${OPENGL_gl_LIBRARY})
+    target_link_libraries(atividade_vivencial_2 PRIVATE glfw ${OPENGL_gl_LIBRARY})
 endif()
 
 set_target_properties(tarefa_parte4 PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}
+    RUNTIME_OUTPUT_DIRECTORY_DEBUG ${CMAKE_BINARY_DIR}
+    RUNTIME_OUTPUT_DIRECTORY_RELEASE ${CMAKE_BINARY_DIR}
+    RUNTIME_OUTPUT_DIRECTORY_RELWITHDEBINFO ${CMAKE_BINARY_DIR}
+    RUNTIME_OUTPUT_DIRECTORY_MINSIZEREL ${CMAKE_BINARY_DIR}
+)
+
+set_target_properties(atividade_vivencial_2 PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}
     RUNTIME_OUTPUT_DIRECTORY_DEBUG ${CMAKE_BINARY_DIR}
     RUNTIME_OUTPUT_DIRECTORY_RELEASE ${CMAKE_BINARY_DIR}

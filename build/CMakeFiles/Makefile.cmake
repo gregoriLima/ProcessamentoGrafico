@@ -81,6 +81,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/tarefa_parte4.dir/DependInfo.cmake"
+  "CMakeFiles/atividade_vivencial_2.dir/DependInfo.cmake"
   "third_party/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake"
   "third_party/glfw/src/CMakeFiles/update_mappings.dir/DependInfo.cmake"
   )
