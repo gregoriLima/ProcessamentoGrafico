@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\tarefa_parte4.dir/objects.a
+C:\msys64\ucrt64\bin\ar.exe qc CMakeFiles\tarefa_parte4.dir/objects.a @CMakeFiles\tarefa_parte4.dir\objects1.rsp
+C:\msys64\ucrt64\bin\g++.exe -static-libgcc -static-libstdc++ -Wl,--whole-archive CMakeFiles\tarefa_parte4.dir/objects.a -Wl,--no-whole-archive -o tarefa_parte4.exe -Wl,--out-implib,libtarefa_parte4.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\tarefa_parte4.dir\linkLibs.rsp
